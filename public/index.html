@@ -8,27 +8,28 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="history-container"> // History</div>
-  <div class="editor-container">
-    <div id="language">// Language</div>
-    <div id="editor">// Enter your code
-function fibonacci(num) {
-  let a = 0, b = 1, temp;
+  <div class="container">
+    <div class="history-base">
+      <div id="history"></div>
+    </div>
 
-  while (num >= 0) {
-      temp = a;
-      a = a + b;
-      b = temp;
-      console.log(b);
-      num--;
-  }
-}
+    <div class="editor-base">
+      <select name="language" id="language-button">
+        <option value="c_c++">C/C++</option>
+        <option value="python">Python</option>
+        <option value="javascript">JavaScript</option>
+        <option value="java">Java</option>
+      </select>
+
+      <div id="editor">// Enter your code</div>
+    </div>    
     
-fibonacci(10);
+    <div class="result-base">
+      <div id="result"></div>
     </div>
   </div>
       
-  <script src="/third-party/ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/third-party/ace-editor/ace.js" type="text/javascript" charset="utf-8"></script>
   <script src="script.js"></script>
 </body>
 </html>
