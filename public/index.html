@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
   <title>Code Analyzer</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <div class="container">
     <div class="history-base">
@@ -14,22 +16,30 @@
     </div>
 
     <div class="editor-base">
-      <select name="language" id="language-button">
-        <option value="c_c++">C/C++</option>
-        <option value="python">Python</option>
-        <option value="javascript">JavaScript</option>
-        <option value="java">Java</option>
-      </select>
+      <div class="language-selector">
+        <button class="btn">Language</button>
+        <ul class="language-options">
+          <li class="language-option">C/C++</li>
+          <li class="language-option">Java</li>
+          <li class="language-option">Python</li>
+          <li class="language-option">JavaScript</li>
+        </ul>
+      </div>
+
+      <div class="submit">
+        <button class="sbmt">Submit</button>
+      </div>
 
       <div id="editor">// Enter your code</div>
-    </div>    
-    
+    </div>
+
     <div class="result-base">
       <div id="result"></div>
     </div>
   </div>
-      
+
   <script src="/third-party/ace-editor/ace.js" type="text/javascript" charset="utf-8"></script>
   <script src="script.js"></script>
 </body>
+
 </html>
